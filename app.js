@@ -38,6 +38,8 @@ const Team=mongoose.model("Teams",new mongoose.Schema(
 app.get("/view-team",async(req,res)=>{
     const teams=await Team.find()
     res.json(teams);
+app.get("/view-team",(req,res)=>{
+    res.send("viewed");
 });
 
 
